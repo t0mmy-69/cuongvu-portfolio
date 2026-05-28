@@ -48,14 +48,16 @@ export default function ServicesSection() {
           {SERVICES.map((svc, i) => (
             <FadeIn key={svc.num} delay={i * 0.1} y={30}>
               <div
-                className="flex items-start gap-6 py-8 sm:py-10 md:py-12"
+                className="grid items-center py-8 sm:py-10 md:py-12"
                 style={{
+                  gridTemplateColumns: 'clamp(4.5rem, 15vw, 210px) 1fr',
+                  gap: '1.5rem',
                   borderBottom: '1px solid rgba(12,12,12,0.15)',
                   borderTop: i === 0 ? '1px solid rgba(12,12,12,0.15)' : undefined,
                 }}
               >
                 <span
-                  className="font-black text-[#0C0C0C] leading-none flex-shrink-0"
+                  className="font-black text-[#0C0C0C] leading-none text-left justify-self-start"
                   style={{ fontSize: 'clamp(3rem, 10vw, 140px)' }}
                 >
                   {svc.num}
