@@ -1,4 +1,3 @@
-import { useRef } from 'react'
 
 const IMAGES = [
   '/mystic-1.png',
